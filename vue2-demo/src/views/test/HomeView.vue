@@ -12,7 +12,7 @@ import logger from '@/js/logger'
 import tools from '@/js/tools'
 // let app
 export default {
-  name: 'TestAjaxView',
+  name: 'HomeView',
   data() {
     return {
       title: 'ajax测试页面',

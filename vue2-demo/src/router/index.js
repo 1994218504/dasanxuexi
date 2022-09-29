@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import test from './test'
+import page from './study'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,9 @@ const routes = [
     name: 'about',
     component: () => import('../views/AboutView.vue'),
   },
-].concat(test)
+]
+  .concat(test)
+  .concat(page)
 
 const router = new VueRouter({
   mode: 'history',

@@ -29,6 +29,15 @@ export default {
     }
   },
   methods: {
+    mapDemo() {
+      let map = new Map()
+      // map是键值对数据结构
+      map.set('one', '数值一'), map.set('date', '日期，约会')
+      map.set('michael', '人名迈克尔，天使米迦勒')
+      // 可以通过key快速获取到值
+      logger.debug('one', map.get('one'))
+      logger.debug('michael', map.get('michael'))
+    },
     send() {
       ws.send(this.echo)
     },
@@ -59,9 +68,11 @@ export default {
     app = this
     logger.debug(app)
     this.initWs()
+    this.mapDemo()
   },
   destroyed() {
     // 销毁webscoket对象
+    ws = null
   },
 }
 </script>

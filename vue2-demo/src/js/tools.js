@@ -307,7 +307,7 @@ tools.ajax = (url, param, cb, handleMessage, method, returnPromise) => {
         MessageBox({
           type: 'error',
           message: resp.data.message,
-          title: '教学管理系统',
+          title: '大三学习期间的报错',
           callback: () => {
             router.push('/login')
           },

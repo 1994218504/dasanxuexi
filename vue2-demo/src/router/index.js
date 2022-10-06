@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import test from './test'
 import page from './study'
+import message from './message'
+import user from './user'
 
 Vue.use(VueRouter)
 
@@ -20,6 +22,8 @@ const routes = [
 ]
   .concat(test)
   .concat(page)
+  .concat(message)
+  .concat(user)
 
 const router = new VueRouter({
   mode: 'history',

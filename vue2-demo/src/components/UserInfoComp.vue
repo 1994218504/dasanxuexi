@@ -1,13 +1,15 @@
 <template>
   <div>
     <!-- 已经登录的情况 -->
-    <div v-if="isLogin">
-      <el-button>{{ tbUser.nickname }}</el-button>
+    <div style="display: flex">
+      <div v-if="isLogin">
+        <el-button>{{ tbUser.nickname }}</el-button>
+      </div>
+      <!-- 需要登陆的情况 -->
+      <div v-else><el-button @click="loginVisible = true"> 登录</el-button> </div>
+      <!-- 登录表单 -->
+      <div v-if="isLogin"><el-button @click="logout()">退出登录</el-button></div>
     </div>
-    <!-- 需要登陆的情况 -->
-    <div v-else><el-button @click="loginVisible = true"> 登录</el-button> </div>
-    <!-- 登录表单 -->
-    <div><el-button @click="logout()">退出登录</el-button></div>
     <el-dialog :visible.sync="loginVisible" title="登录">
       <div>
         <el-form :rules="rules">
@@ -82,6 +84,7 @@ export default {
         '/user/auth/login',
         this.user,
         (data) => {
+          this.loginVisible = false
           if (data.success) {
             // 成功获取用户信息
             this.getUserInfo()

@@ -307,7 +307,7 @@ tools.ajax = (url, param, cb, handleMessage, method, returnPromise) => {
         MessageBox({
           type: 'error',
           message: resp.data.message,
-          title: '大三学习期间的报错',
+          title: '您没有登录',
           callback: () => {
             router.push('/login')
           },
@@ -316,7 +316,7 @@ tools.ajax = (url, param, cb, handleMessage, method, returnPromise) => {
       }
       // 应答结果为错误且不需要处理的就直接弹出对话框
       if (!resp.data.success && !handleMessage) {
-        MessageBox({ type: 'error', message: resp.data.message, title: '教学管理系统' })
+        MessageBox({ type: 'error', message: resp.data.message, title: '大三学习期间的报错' })
         return
       }
       // logger.debug('自己处理应答结果')

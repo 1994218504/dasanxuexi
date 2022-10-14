@@ -5,6 +5,7 @@ import test from './test'
 import page from './study'
 import message from './message'
 import user from './user'
+import error from './error'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,7 @@ const routes = [
   .concat(page)
   .concat(message)
   .concat(user)
+  .concat(error)
 
 const router = new VueRouter({
   mode: 'history',

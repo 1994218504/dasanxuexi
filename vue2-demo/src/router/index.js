@@ -26,6 +26,16 @@ const routes = [
   .concat(message)
   .concat(user)
   .concat(error)
+  .concat([
+    //通配符路由配置*表示任意路径
+    // 所以本配置一定要在路由列表的最后
+    {
+      path: '*',
+      name: 'all_toher',
+      // redirect表示重定向到其它path
+      redirect: '/error/404',
+    },
+  ])
 
 const router = new VueRouter({
   mode: 'history',

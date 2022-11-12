@@ -7,8 +7,23 @@ let routers = [
   },
   {
     path: '/test/ws',
-    name: 'test',
+    name: 'testWs',
     component: () => import('../views/test/WsView.vue'),
+  },
+  {
+    path: '/test/router',
+    name: 'testrouter',
+    component: () => import('../views/test/RouterView.vue'),
+  },
+  {
+    path: '/test/routerinfo/:info',
+    name: 'tesetrouterinfo',
+    component: () => import('../views/test/RouterInfoView.vue'),
+  },
+  {
+    path: '/test/amap',
+    name: 'tesetrouterinfo',
+    component: () => import('../views/test/AMapTestView.vue'),
   },
 ]
 

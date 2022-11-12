@@ -14,5 +14,10 @@ let routers = [
     name: 'messageuser',
     component: () => import('../views/message/UserView.vue'),
   },
+  {
+    path: '/message/detail/:umid',
+    name: 'messageuserumid',
+    component: () => import('../views/message/DetailView.vue'),
+  },
 ]
 export default routers

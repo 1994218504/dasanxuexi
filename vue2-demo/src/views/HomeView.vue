@@ -14,6 +14,14 @@ export default {
         { title: '关于', path: '/about' },
         { title: '留言板首页', path: '/message/main' },
         { title: 'websocket测试', path: '/test/ws' },
+        { title: '登录界面', path: '/user/login' },
+        { title: '地址栏传信息', path: '/test/router' },
+        { title: '分页组件演示', path: '/study/page' },
+        { title: '利用组件演示信息管理', path: '/study/vuex' },
+        { title: 'vuex管理用户登录信息', path: '/study/vuexother' },
+        { title: '未知', path: '/message' },
+        { title: '主页', path: '/message/main' },
+        { title: '未知', path: '/message/user' },
       ],
     }
   },
@@ -23,8 +31,19 @@ export default {
       this.$router.push('/about')
     },
     toPage(page) {
-      this.$router.push(page.path)
+      this.$router.push(page)
     },
   },
 }
 </script>
+<style scoped>
+a {
+  display: inline-block;
+  margin: 0.5rem;
+}
+a:not(:last-child)::after {
+  content: '  |  ';
+  display: inline-block;
+  margin: 0.2rem;
+}
+</style>

@@ -5,6 +5,13 @@ let routers = [
     name: 'test',
     component: () => import('../views/test/HomeView.vue'),
   },
+
+  {
+    path: '/test/test',
+    name: 'test',
+    component: () => import('../views/test/TestView.vue'),
+  },
+
   {
     path: '/test/ws',
     name: 'testWs',
@@ -24,6 +31,11 @@ let routers = [
     path: '/test/amap',
     name: 'tesetrouterinfo',
     component: () => import('../views/test/AMapTestView.vue'),
+  },
+  {
+    path: '/test/logo',
+    name: 'tesetrouterinfo',
+    component: () => import('../views/test/LogoView.vue'),
   },
 ]
 

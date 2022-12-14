@@ -14,6 +14,7 @@ export default {
       title: '另外一个vuex组件',
     }
   },
+
   computed: {
     compCount() {
       return this.$store.state.count

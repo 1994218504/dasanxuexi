@@ -48,6 +48,7 @@ export default {
       this.user.password = tools.md5(this.orgpwd)
       tools.ajax('/user/auth/login', this.user, (data) => {
         logger.debug(data)
+        this.$store.dispatch('updateUserInfo').then().catch()
         this.$router.push('/message')
       })
     },

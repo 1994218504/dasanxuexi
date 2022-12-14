@@ -22,6 +22,8 @@ export default {
         { title: '未知', path: '/message' },
         { title: '主页', path: '/message/main' },
         { title: '未知', path: '/message/user' },
+        { title: '头像', path: '/test/logo' },
+        { title: '页面跳转', path: '/study/tabe' },
       ],
     }
   },
@@ -45,5 +47,9 @@ a:not(:last-child)::after {
   content: '  |  ';
   display: inline-block;
   margin: 0.2rem;
+}
+.divspan {
+  flex-flow: column;
+  white-space: nowrap;
 }
 </style>

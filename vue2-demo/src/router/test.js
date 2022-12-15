@@ -37,6 +37,26 @@ let routers = [
     name: 'tesetrouterinfo',
     component: () => import('../views/test/LogoView.vue'),
   },
+  {
+    path: '/test/tab',
+    name: 'tesetrouterinfo',
+    component: () => import('../views/test/TaeView.vue'),
+  },
+  {
+    path: '/test/tab/one',
+    name: 'tesetrouterinfo',
+    component: () => import('../views/test/TabOneView.vue'),
+  },
+  {
+    path: '/test/tab/two',
+    name: 'tesetrouterinfo',
+    component: () => import('../views/test/TabTwoView.vue'),
+  },
+  {
+    path: '/test/tab/there',
+    name: 'tesetrouterinfo',
+    component: () => import('../views/test/TabthereView.vue'),
+  },
 ]
 
 export default routers

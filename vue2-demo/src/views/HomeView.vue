@@ -1,7 +1,7 @@
 <template>
   <div>
     首页
-    <a v-for="p in pages" :key="p.path" @click="toPage(p.path)" href="javascript:viod(0)">{{ p.title }}</a>
+    <a v-for="p in pages" :key="p.path" @click="toPage(p.path)" href="javascript:void(0)">{{ p.title }}</a>
   </div>
 </template>
 
@@ -20,10 +20,13 @@ export default {
         { title: '利用组件演示信息管理', path: '/study/vuex' },
         { title: 'vuex管理用户登录信息', path: '/study/vuexother' },
         { title: '未知', path: '/message' },
-        { title: '主页', path: '/message/main' },
         { title: '未知', path: '/message/user' },
         { title: '头像', path: '/test/logo' },
         { title: '页面跳转', path: '/study/tabe' },
+        { title: '2004页面跳转', path: '/test/tab' },
+        { title: '2004页面跳转one', path: '/test/tab/one' },
+        { title: '2004页面跳转two', path: '/test/tab/two' },
+        { title: '2004页面跳转there', path: '/test/tab/there' },
       ],
     }
   },

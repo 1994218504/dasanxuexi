@@ -46,6 +46,7 @@ export default {
   methods: {
     login() {
       this.user.password = tools.md5(this.orgpwd)
+      logger.debug('=================>md5', this.user.password)
       tools.ajax('/user/auth/login', this.user, (data) => {
         logger.debug(data)
         this.$store.dispatch('updateUserInfo').then().catch()
